@@ -43,9 +43,7 @@ public class OwnVideoRemoveWatermarkToolApiConstant {
             String videoDetail = HttpRequest.get(xBogus)
                     .header("Referer","https://www.douyin.com/video/"+videoID)
                     .header(Header.USER_AGENT, userAgent)
-                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126))
-                    .header("ttwid", BogusUtils.getTtwid())
-                    .header("bd_ticket_guard_client_data", "eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCUFhsMVNpdjRrMHpkaXlHdWZFcGZIeVMrS01aazBML1EzQVdpaHROY3grYytCK3FieUpBMU1JYUp0UGlNd3JMMllUUFV3NWdDMERSTG1jT0hnSlFYOW89IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ==")
+                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126)+"; ttwid=" + BogusUtils.getTtwid()+"; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCSTdvdE10NlVUYzN3Y2FhcVNlMmErQjZkSHcrOTNXQjhkc0lmMWVBa29mcUtwS3hrREZYR0JMR2lHS3gweGtLaHUyUWtNdklMcmZTbWtIanlNLzN4SlE9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ%3D%3D")
                     .execute()
                     .body();
             Biz.check(ObjectUtil.isEmpty(videoDetail),"本次请求失败，可再次请求！");
@@ -92,9 +90,7 @@ public class OwnVideoRemoveWatermarkToolApiConstant {
             String videoDetail = HttpRequest.get(xBogus)
                     .header("Referer","https://www.douyin.com/video/"+videoID)
                     .header(Header.USER_AGENT, userAgent)
-                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126))
-                    .header("ttwid", BogusUtils.getTtwid())
-                    .header("bd_ticket_guard_client_data", "eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCRFlhSWZCVi96RXBDSVRYNG0yQ3BMMkJLcWI0TWlKUDZ3SmM5ak9GRWQrMFA1VXIzNXFON1Z5Uk5aejBONS9OZi9GOGUxN3dRVkZ4M2czamlpbUZFaEk9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ==")
+                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126)+"; ttwid=" + BogusUtils.getTtwid()+"; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCSTdvdE10NlVUYzN3Y2FhcVNlMmErQjZkSHcrOTNXQjhkc0lmMWVBa29mcUtwS3hrREZYR0JMR2lHS3gweGtLaHUyUWtNdklMcmZTbWtIanlNLzN4SlE9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ%3D%3D")
                     .execute()
                     .body();
             Biz.check(ObjectUtil.isEmpty(videoDetail),"本次请求失败，可再次请求！");
@@ -1029,7 +1025,7 @@ public class OwnVideoRemoveWatermarkToolApiConstant {
 
 //        System.out.println(douyinAweme("https://v.douyin.com/iJPPm5C7/", null));
 
-//        System.out.println(douyinExclusive("1.20 dnD:/ 复制打开抖音，看看# vlog日常 不好意思哈# vlog日常  https://v.douyin.com/iJEtVNrX/"));
+        System.out.println(douyinExclusive("1.05 YMw:/ 04/14 r@E.HV  复制打开抖音，看看【汽车周边 可能有关】开始感到幸福的时候 就知道是痛苦在倒计时了  https://v.douyin.com/idVVA8nk/"));
     }
 
     public static JSONObject removeWatermark(String url) {

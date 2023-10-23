@@ -41,9 +41,7 @@ public class OwnImageRemoveWatermarkToolApiConstant {
             String videoDetail = HttpRequest.get(xBogus)
                     .header("Referer","https://www.douyin.com/video/"+videoID)
                     .header(Header.USER_AGENT, userAgent)
-                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126))
-                    .header("ttwid", BogusUtils.getTtwid())
-                    .header("bd_ticket_guard_client_data", "eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWNsaWVudC1jc3IiOiItLS0tLUJFR0lOIENFUlRJRklDQVRFIFJFUVVFU1QtLS0tLVxyXG5NSUlCRFRDQnRRSUJBREFuTVFzd0NRWURWUVFHRXdKRFRqRVlNQllHQTFVRUF3d1BZbVJmZEdsamEyVjBYMmQxXHJcbllYSmtNRmt3RXdZSEtvWkl6ajBDQVFZSUtvWkl6ajBEQVFjRFFnQUVKUDZzbjNLRlFBNUROSEcyK2F4bXAwNG5cclxud1hBSTZDU1IyZW1sVUE5QTZ4aGQzbVlPUlI4NVRLZ2tXd1FJSmp3Nyszdnc0Z2NNRG5iOTRoS3MvSjFJc3FBc1xyXG5NQ29HQ1NxR1NJYjNEUUVKRGpFZE1Cc3dHUVlEVlIwUkJCSXdFSUlPZDNkM0xtUnZkWGxwYmk1amIyMHdDZ1lJXHJcbktvWkl6ajBFQXdJRFJ3QXdSQUlnVmJkWTI0c0RYS0c0S2h3WlBmOHpxVDRBU0ROamNUb2FFRi9MQnd2QS8xSUNcclxuSURiVmZCUk1PQVB5cWJkcytld1QwSDZqdDg1czZZTVNVZEo5Z2dmOWlmeTBcclxuLS0tLS1FTkQgQ0VSVElGSUNBVEUgUkVRVUVTVC0tLS0tXHJcbiJ9")
+                    .header(Header.COOKIE, "msToken=" + BogusUtils.randStr(126)+"; ttwid=" + BogusUtils.getTtwid()+"; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCSTdvdE10NlVUYzN3Y2FhcVNlMmErQjZkSHcrOTNXQjhkc0lmMWVBa29mcUtwS3hrREZYR0JMR2lHS3gweGtLaHUyUWtNdklMcmZTbWtIanlNLzN4SlE9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoxfQ%3D%3D")
                     .execute()
                     .body();
             Biz.check(ObjectUtil.isEmpty(videoDetail),"本次请求失败，可再次请求！");
